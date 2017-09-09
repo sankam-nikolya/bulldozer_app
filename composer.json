@@ -2,7 +2,7 @@
   "name": "bulldozer/bulldozer_app",
   "type": "project",
   "require": {
-    "bulldozer/bulldozer":"*",
+    "bulldozer/bulldozer": "*",
     "bulldozer/chosen": "*",
     "bulldozer/fontawesome": "*",
     "bulldozer/noty": "*",
@@ -15,5 +15,11 @@
     "yiisoft/yii2-faker": "~2.0.0",
     "codeception/base": "^2.2.3",
     "codeception/verify": "~0.3.1"
-  }
+  },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://asset-packagist.org"
+    }
+  ]
 }
