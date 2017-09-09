@@ -1,0 +1,19 @@
+{
+  "name": "bulldozer/bulldozer_app",
+  "type": "project",
+  "require": {
+    "bulldozer/bulldozer":"*",
+    "bulldozer/chosen": "*",
+    "bulldozer/fontawesome": "*",
+    "bulldozer/noty": "*",
+    "bulldozer/users": "*",
+    "bulldozer/files": "*"
+  },
+  "require-dev": {
+    "yiisoft/yii2-debug": "~2.0.0",
+    "yiisoft/yii2-gii": "~2.0.0",
+    "yiisoft/yii2-faker": "~2.0.0",
+    "codeception/base": "^2.2.3",
+    "codeception/verify": "~0.3.1"
+  }
+}
