@@ -17,6 +17,9 @@ return [
     'controllerNamespace' => 'backend\controllers',
     'bootstrap' => ['log'],
     'components' => [
+        'assetManager' => [
+            'baseUrl' => '/assets/',
+        ],
         'menu' => [
             'class' => 'bulldozer\components\BackendMenu',
             'modules' => [
@@ -25,6 +28,7 @@ return [
         ],
         'request' => [
             'csrfParam' => '_csrf-backend',
+            'baseUrl' => '/admin',
         ],
         'user' => [
             'identityClass' => 'bulldozer\users\models\User',
