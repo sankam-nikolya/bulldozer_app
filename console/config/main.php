@@ -19,7 +19,6 @@ return [
         'migrate' => [
             'class' => 'yii\console\controllers\MigrateController',
             'migrationNamespaces' => [
-                'app\migrations',
                 'bulldozer\users\console\migrations',
                 'bulldozer\files\migrations',
             ],
