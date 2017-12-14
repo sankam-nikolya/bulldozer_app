@@ -1,6 +1,6 @@
 <?php
 
-namespace backend\widgets\menu;
+namespace backend\widgets;
 
 use bulldozer\App;
 use yii\helpers\Url;
@@ -79,7 +79,7 @@ class MenuWidget extends \yii\base\Widget
             }
         }
 
-        return $this->render('index', [
+        return $this->render('menu', [
             'items' => $items,
         ]);
     }

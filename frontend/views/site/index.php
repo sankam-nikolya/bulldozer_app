@@ -2,5 +2,5 @@
 
 /* @var $this yii\web\View */
 
-$this->title = 'Главная';
+$this->title = Yii::t('app', 'Home');
 ?>

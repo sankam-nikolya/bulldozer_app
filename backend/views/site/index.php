@@ -2,5 +2,5 @@
 
 /* @var $this yii\web\View */
 
-$this->title = 'Панель управления';
+$this->title = Yii::t('app', 'Control panel');
 ?>

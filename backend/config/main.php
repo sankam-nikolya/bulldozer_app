@@ -58,6 +58,16 @@ return [
             'rules' => [
             ],
         ],
+        'i18n' => [
+            'class' => \bulldozer\i18n\I18N::class,
+            'translations' => [
+                '*' => [
+                    'class' => 'yii\i18n\PhpMessageSource',
+                    'basePath' => '@backend/messages',
+                    'sourceLanguage' => 'en-US',
+                ],
+            ],
+        ],
     ],
     'modules' => [
         'users' => [

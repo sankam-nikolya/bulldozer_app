@@ -8,6 +8,7 @@ $params = array_merge(
 
 return [
     'id' => 'bulldozer-frontend',
+    'language' => 'ru',
     'basePath' => dirname(__DIR__),
     'aliases' => [
         '@bower' => '@vendor/bower-asset',
@@ -44,6 +45,16 @@ return [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [],
+        ],
+        'i18n' => [
+            'class' => \bulldozer\i18n\I18N::class,
+            'translations' => [
+                '*' => [
+                    'class' => 'yii\i18n\PhpMessageSource',
+                    'basePath' => '@frontend/messages',
+                    'sourceLanguage' => 'en-US',
+                ],
+            ],
         ],
     ],
     'params' => $params,
