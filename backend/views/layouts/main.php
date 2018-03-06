@@ -185,14 +185,14 @@ $bundle = AppAsset::register($this);
                             <?php if (isset($this->params['breadcrumbs']) && count($this->params['breadcrumbs']) > 0): ?>
                                 <?php foreach ($this->params['breadcrumbs'] as $breadcrumb): ?>
                                     <?php if (is_array($breadcrumb)): ?>
-                                        <?php if (is_array($breadcrumb['url'])): ?>
-                                            <li>
-                                                <a href="<?= Url::to($breadcrumb['url']) ?>"><span><?= $breadcrumb['label'] ?></span></a>
-                                            </li>
+                                        <?php if (isset($breadcrumb['url'])): ?>
+                                            <?php if (is_array($breadcrumb['url'])): ?>
+                                                <li><a href="<?= Url::to($breadcrumb['url']) ?>"><span><?= $breadcrumb['label'] ?></span></a></li>
+                                            <?php else: ?>
+                                                <li><a href="<?= $breadcrumb['url'] ?>"><span><?= $breadcrumb['label'] ?></span></a></li>
+                                            <?php endif ?>
                                         <?php else: ?>
-                                            <li>
-                                                <a href="<?= $breadcrumb['url'] ?>"><span><?= $breadcrumb['label'] ?></span></a>
-                                            </li>
+                                            <li><span><?= $breadcrumb['label'] ?></span></li>
                                         <?php endif ?>
                                     <?php else: ?>
                                         <li><span><?= $breadcrumb ?></span></li>
