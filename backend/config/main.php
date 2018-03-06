@@ -21,7 +21,7 @@ return [
             'baseUrl' => '/assets/',
         ],
         'menu' => [
-            'class' => 'bulldozer\components\BackendMenu',
+            'class' => \bulldozer\components\BackendMenu::class,
             'modules' => [
                 'users'
             ]
@@ -31,7 +31,7 @@ return [
             'baseUrl' => '/admin',
         ],
         'user' => [
-            'identityClass' => 'bulldozer\users\models\User',
+            'identityClass' => \bulldozer\users\models\User::class,
             'enableAutoLogin' => true,
             'identityCookie' => ['name' => '_identity-backend', 'httpOnly' => true],
             'loginUrl' => ['users/login']
@@ -71,12 +71,12 @@ return [
     ],
     'modules' => [
         'users' => [
-            'class' => 'bulldozer\users\backend\Module',
+            'class' => \bulldozer\users\backend\Module::class,
         ],
     ],
     'params' => $params,
     'as beforeRequest' => [
-        'class' => 'yii\filters\AccessControl',
+        'class' => \yii\filters\AccessControl::class,
         'rules' => [
             [
                 'actions' => ['login', 'error', 'logout'],

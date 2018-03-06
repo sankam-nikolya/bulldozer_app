@@ -49,14 +49,11 @@ AppAsset::register($this);
                     $menuItems[] = ['label' => Yii::t('app', 'Admin panel'), 'url' => ['/admin']];
                 }
 
-                $menuItems[] = '<li>'
-                    . Html::beginForm(['/users/logout'], 'post')
-                    . Html::submitButton(
-                        Yii::t('app', 'Logout ({name})', ['name' => App::$app->user->identity->email]),
-                        ['class' => 'btn btn-link logout']
-                    )
-                    . Html::endForm()
-                    . '</li>';
+                $menuItems[] = [
+                    'label' => Yii::t('app', 'Logout ({name})', ['name' => App::$app->user->identity->email]),
+                    'url' => ['/users/logout'],
+                    'linkOptions' => ['data-method' => 'post']
+                ];
             }
             echo Nav::widget([
                 'options' => ['class' => 'navbar-nav navbar-right'],
